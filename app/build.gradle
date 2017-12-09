@@ -24,9 +24,55 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    /* Kotlin */
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    /* Anko */
+    compile "org.jetbrains.anko:anko-commons:$anko_version"
+    compile "org.jetbrains.anko:anko-sdk25-coroutines:$anko_version"
+    compile "org.jetbrains.anko:anko-appcompat-v7-coroutines:$anko_version"
+
+    /* Google Support */
     implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+
+    /* Dagger 2 */
+    implementation 'com.google.dagger:dagger:2.13'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+
+    /* Image loader, Picasso */
+    implementation 'com.squareup.picasso:picasso:2.5.2' //Image loadder
+
+    /* Reactive Java and Android */
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.6'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.0.0'
+
+    /* Joda time */
+    implementation 'net.danlew:android.joda:2.9.9'
+
+    /* Retrofit */
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    /* OkHttp */
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.squareup.okio:okio:1.13.0'
+
+    /* Gson */
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    /* Unit Test */
     testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.4.2'
+
+    /* Instrumentation Test */
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
